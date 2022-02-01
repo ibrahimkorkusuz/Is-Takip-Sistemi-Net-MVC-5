@@ -1,0 +1,58 @@
+﻿@model Employee
+@{
+    ViewBag.Title = "Insert";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@if (Session["employee"] != null)
+{
+    <div class="container-fluid">
+
+        @using (Html.BeginForm("Insert", "Employee", FormMethod.Post))
+        {
+            <div class="row justify-content-md-center">
+                <div class="col-lg-5 col-lg-offset-3">
+                    <div class="form-group">
+                        <h2>Kullanıcı Ekle</h2><br />
+                        <label>İsim</label>
+                        @Html.TextBoxFor(model => model.FirstName, new { @class = "form-control" })
+                    </div>
+
+                    <div class="form-group">
+                        <label>Soyisim</label>
+                        @Html.TextBoxFor(model => model.LastName, new { @class = "form-control" })
+                    </div>
+
+                    <div class="form-group">
+                        <label>Pozisyon</label>
+                        @Html.TextBoxFor(model => model.Title, new { placeholder = "Satış Temsilcisi", @class = "form-control" })
+                    </div>
+                    <div class="form-group">
+                        <label>Email</label>
+                        @Html.TextBoxFor(model => model.Email, new { @class = "form-control" })
+                    </div>
+                    <div class="form-group">
+                        <label>Şifre</label>
+                        @Html.TextBoxFor(model => model.Password, new {@class = "form-control" })
+                    </div>
+                    <div class="form-group">
+                        <label>Telefon</label>
+                        @Html.TextBoxFor(model => model.Phone, new { placeholder = "05063650277", @class = "form-control" })
+                    </div>
+                    
+                    <button type="submit" class="btn btn-success">Ekle</button>
+                    <br />
+                    <br />
+                </div>
+            </div>
+        }
+
+        @if (ViewBag.Message != null)
+        {
+            <div class="alert alert-danger">
+                <strong>Hata!</strong> @ViewBag.Message
+            </div>
+
+        }
+    </div>
+}

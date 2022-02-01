@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EfeOtomasyon", "EfeOtomasyon\EfeOtomasyon.csproj", "{3C7B52BF-B7C0-4797-9C36-4C013D843F6E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EfeOtomasyonDAL", "EfeOtomasyonDAL\EfeOtomasyonDAL.csproj", "{04B12F46-3FA8-45CC-8E0A-E59B2C5A424E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EfeOtomasyonBLL", "EfeOtomasyonBLL\EfeOtomasyonBLL.csproj", "{2D122305-7976-4B90-B254-C7FDF6E07B9E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3C7B52BF-B7C0-4797-9C36-4C013D843F6E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3C7B52BF-B7C0-4797-9C36-4C013D843F6E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3C7B52BF-B7C0-4797-9C36-4C013D843F6E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3C7B52BF-B7C0-4797-9C36-4C013D843F6E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{04B12F46-3FA8-45CC-8E0A-E59B2C5A424E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{04B12F46-3FA8-45CC-8E0A-E59B2C5A424E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{04B12F46-3FA8-45CC-8E0A-E59B2C5A424E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{04B12F46-3FA8-45CC-8E0A-E59B2C5A424E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2D122305-7976-4B90-B254-C7FDF6E07B9E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2D122305-7976-4B90-B254-C7FDF6E07B9E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2D122305-7976-4B90-B254-C7FDF6E07B9E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2D122305-7976-4B90-B254-C7FDF6E07B9E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

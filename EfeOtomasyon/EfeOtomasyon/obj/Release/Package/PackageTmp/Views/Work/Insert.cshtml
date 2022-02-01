@@ -1,0 +1,86 @@
+﻿
+@model WorkOrder
+@{
+    ViewBag.Title = "Insert";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@if (Session["employee"] != null)
+{
+    <div class="container-fluid">
+
+        @using (Html.BeginForm("Insert", "Work", FormMethod.Post, new { enctype = "multipart/form-data" }))
+        {
+            <div class="row justify-content-md-center">
+                <div class="col-lg-5 col-lg-offset-3">
+                    <div class="form-group">
+                        <h2>İş Emri Ekle</h2><br />
+                        <label>Sipariş No</label>
+                        @Html.TextBoxFor(model => model.PlugNo, new { @class = "form-control" })
+                    </div>
+                   
+                    <div class="form-group">
+                        <label>İşin Adı</label>
+                        @Html.TextBoxFor(model => model.WorkName, new { @class = "form-control" })
+                    </div>
+
+                    <div class="form-group">
+                        <label>İşin Sahibi</label>
+                        @Html.DropDownListFor(model => model.EmployeeID, (SelectList)ViewBag.Employee, new { @class = "form-control" })
+                    </div>
+                    <div class="form-group">
+                        <label>İş Başlangıç Tarihi</label>
+                        @Html.TextBoxFor(model => model.CreateDate, new { placeholder = "13.07.2019",  @class = "form-control" })
+                    </div>
+                    <div class="form-group">
+                        <label>İş Teslim Tarihi</label>
+                        @Html.TextBoxFor(model => model.DueDate, new { placeholder = "15.07.2019", @class = "form-control" })
+                    </div>
+                    <div class="form-group">
+                        <label>Bölüm Adı</label>
+                        @Html.DropDownListFor(model => model.CategoryID, (SelectList)ViewBag.Category, new { @class = "form-control" })
+                    </div>
+                    <div class="form-group">
+                        <label>Malzeme</label>
+                        @Html.TextBoxFor(model => model.ProductName, new { @class = "form-control" })
+                    </div>
+                    <div class="form-group">
+                        <label>Miktar</label>
+                        @Html.TextBoxFor(model => model.Quantity, new { @class = "form-control" })
+                    </div>
+                    <div class="form-group">
+                        <label>Açıklama / Not</label>
+                        @Html.TextAreaFor(model => model.Description, new { @class = "form-control" })
+                    </div>
+                    <div class="form-group">
+                        <label>Link</label>
+                        @Html.TextBoxFor(model => model.Link, new { @class = "form-control" })
+                    </div>
+                    <div class="form-group">
+                        <label>Resim</label>
+                        @Html.TextBoxFor(model => model.ImagePath, new { @class = "form-control" })
+                    </div>
+                    <div class="form-group">
+                        <label>Resim Seçiniz</label>
+                        <input type="file" name="fluResim" />
+
+                    </div>
+
+
+                    <button type="submit" class="btn btn-success">Ekle</button>
+                    <br />
+                    <br />
+                </div>
+            </div>
+        }
+      
+
+        @if (ViewBag.Message != null)
+        {
+            <div class="alert alert-danger">
+                <strong>Hata!</strong> @ViewBag.Message
+            </div>
+
+        }
+    </div>
+}

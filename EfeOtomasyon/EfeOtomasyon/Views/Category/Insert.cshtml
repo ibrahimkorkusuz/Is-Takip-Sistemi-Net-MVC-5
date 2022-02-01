@@ -1,0 +1,35 @@
+﻿@model Category
+@{
+    ViewBag.Title = "Insert";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@if (Session["employee"] != null)
+{
+    <div class="container-fluid">
+
+        @using (Html.BeginForm("Insert", "Category", FormMethod.Post))
+        {
+            <div class="row justify-content-md-center">
+                <div class="col-lg-5 col-lg-offset-3">
+                    <div class="form-group">
+                        <h2>Bölüm Ekle</h2><br />
+                        <label>Bölüm Adı</label>
+                        @Html.TextBoxFor(model => model.CategoryName, new { @class = "form-control" })
+                    </div>
+                    <button type="submit" class="btn btn-success">Ekle</button>
+                    <br />
+                    <br />
+                </div>
+            </div>
+        }
+
+        @if (ViewBag.Message != null)
+        {
+            <div class="alert alert-danger">
+                <strong>Hata!</strong> @ViewBag.Message
+            </div>
+
+        }
+    </div>
+}
